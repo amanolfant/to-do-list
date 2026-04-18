@@ -1,0 +1,15 @@
+run this query for database
+
+CREATE DATABASE `to-do`;
+
+DROP TABLE IF EXISTS `tasks`;
+
+CREATE TABLE `tasks`(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(255) NOT NULL,
+    `description` VARCHAR(255) NOT NULL,
+    `priority` VARCHAR(10) NOT NULL DEFAULT 'Medium',
+    `due_date` DATE NOT NULL,
+    `status` TEXT DEFAULT 'Pending',
+    PRIMARY KEY (`id`)
+)
