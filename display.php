@@ -88,7 +88,7 @@ if(!$con){
                 </div>
             </div>
         </div>
-        <footer class="navbar-fixed-bottom bg-dark text-center text-white p-3 mt-5">
+        <footer class="bg-dark text-center text-white p-3 mt-5">
             <p>&copy; 2026 To-Do Task App. All rights reserved.</p>
         </footer>
 </body>
