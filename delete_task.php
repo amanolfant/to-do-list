@@ -1,0 +1,19 @@
+<?php
+$con = mysqli_connect("localhost","root","","to-do");
+if(!$con){
+    die("Connection failed: " . mysqli_connect_error());
+}
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    $stmt = $con->prepare("DELETE FROM tasks WHERE id= ?");
+    $stmt->bind_param("i" , $id);
+    if($stmt->execute()){
+        header("Location: display.php");
+        exit;
+    }
+    else{
+        echo "error:" . $stmt->error;   
+    }
+    $stmt->close();
+}
+?>
